@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Types</title>
+</head>
+
+<body style="background-color: beige; color:black; font-family:'Franklin Gothic Medium', Arial, sans-serif" >
+    <!-- Form (Grouped Values, connected with Submit Button or Image Button)-->
+    <form action="index.html" method="post">
+
+        <!-- CheckBox-->
+        <label for="Checkbox">Check this Box</label>
+        <input type="checkbox"><br>
+
+        <!-- RadioBox (Name has to be equal, only the selected value is passed on submit)-->
+        <fieldset>
+            <legend>Select an option:</legend>
+          
+            <div>
+              <input type="radio" id="choice-basic" name="package" value="1" checked/>
+              <label for="huey">Basic (Free)</label>
+            </div>
+          
+            <div>
+              <input type="radio" id="choice-premium" name="package" value="2" />
+              <label for="dewey">Premium ($49,99)</label>
+            </div>
+          
+            <div>
+              <input type="radio" id="choice-black" name="package" value="3"/>
+              <label for="louie">Black ($99,99)</label>
+            </div>
+        </fieldset>
+
+        <!--Range Input Audio Input(Bars)-->
+        <div>
+        <input type="range" id="volume" name="volume" min="0" max="11" />
+        <label for="volume">Volume</label>
+        </div>
+        <div>
+        <input type="range" id="cowbell" name="cowbell" min="0" max="100" value="90" step="10" />
+        <label for="cowbell">Cowbell</label>
+        </div><br>
+
+        <!--Text Input-->
+        <label for="name">Username (4 to 12 characters):</label>
+        <input type="text" id="Username" name="username" required minlength="4" maxlength="12" size="12" /><br>
+
+        <!--Password Input-->
+        <label for="password">Password (Min. 6 characters):</label>
+        <input type="password" id="password" name="password" required minlength="6" size="10" /><br>
+
+        <!--URL Input-->
+        <label for="url">Enter an https:// URL:</label>
+        <input type="url" name="url" id="url" placeholder="https://example.com" pattern="https://.*" size="30" required /><br>
+          
+        <!--Date Input-->
+        <label for="date">Insert Date</label>
+        <input type="date" id="date"><br>
+
+        <!-- Date + Time-->
+        <label for="meeting-time">Insert second date</label>
+        <input type="datetime-local" id="meeting-tme"><br>
+                
+        <!-- Email Input-->
+        <label for="email">Enter your email:</label>
+        <input type="email" id="email" required /><br>
+
+        <!-- File Upload Button-->
+        <label for="fileupload">Upload a File:</label>
+        <input type="file" id="fileupload"><br>
+
+        <!-- Number Value with Scroll Button-->
+        <label for="number">Starting Inventory</label>
+        <input type="number" id="stock-amount" step="5"><br>
+
+        <!-- Text input area for longer text-->
+        <label >Your PGP Public Key:</label><br>
+        <textarea name="message" rows="10"cols="30"/></textarea><br>
+
+        <!-- Hidden Value-->
+        <input type="hidden" id="postId" name="postId" value="thistextispassedalongwhensubmitting" />
+
+        <!-- Submit & "Login" Button (image). The two buttons are on the same level with help of a table-->
+        <table>
+            <tr>
+                <td><input type="image" id="image" alt="Login" src="images/login.png" /></td>
+                <td><input type="submit"id="submitbutton"></td>
+            </tr>
+        </table><br>
+        
+    </form><br>
+    <hr><br>
+
+    <!-- Search Field & Search Button-->
+    <label for="site-search">Search the site:</label>
+    <input type="search" id="site-search" name="q" />
+    <button>Search</button><br>
+
+</body>
+</html>
